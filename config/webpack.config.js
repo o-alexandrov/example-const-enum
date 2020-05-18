@@ -372,6 +372,10 @@ module.exports = function(webpackEnv) {
                 
                 plugins: [
                   [
+                    require.resolve('babel-plugin-const-enum'),
+                    { transform: 'constObject' },
+                  ],
+                  [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
                       loaderMap: {
